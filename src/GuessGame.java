@@ -8,7 +8,18 @@ public class GuessGame
 
 	public static void main(final String[] args)
 	{
+		int max = 10;
+		if (args.length > 0)
+		{
+			try
+			{
+				max = Integer.parseInt(args[0]);
+			} catch (final NumberFormatException ne)
+			{
+				throw new RuntimeException("wrong cmd line param");
+			}
 
+		}
 		// This will generate a random number that we call it a magicNumber.
 		final Random rnd = new Random(System.currentTimeMillis());
 		final int magicNumber = rnd.nextInt(10);
