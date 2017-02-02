@@ -22,7 +22,7 @@ public class GuessGame
 		}
 		// This will generate a random number that we call it a magicNumber.
 		final Random rnd = new Random(System.currentTimeMillis());
-		final int magicNumber = rnd.nextInt(10);
+		final int magicNumber = rnd.nextInt(max);
 
 		System.out.println("I have a secret number, can you guess it !!!");
 
